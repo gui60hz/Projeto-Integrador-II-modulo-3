@@ -1,0 +1,54 @@
+Clientes
+
+Atributos:
+
+id_cliente (INT) - Identificador único do cliente.
+
+nome (VARCHAR(100)) - Nome do cliente.
+
+email (VARCHAR(100)) - Email do cliente.
+
+telefone (VARCHAR(15)) - Número de telefone do cliente.
+
+Produtos
+
+Atributos:
+
+id_produto (INT) - Identificador único do produto.
+
+nome (VARCHAR(100)) - Nome do produto.
+
+descricao (TEXT) - Descrição do produto.
+
+preco (DECIMAL(10, 2)) - Preço do produto.
+
+Pedidos
+
+Atributos:
+
+id_pedido (INT) - Identificador único do pedido.
+
+id_cliente (INT) - Chave estrangeira referenciando o cliente.
+
+data_pedido (DATETIME) - Data e hora do pedido.
+
+valor_total (DECIMAL(10, 2)) - Valor total do pedido.
+
+Itens de Pedido
+
+Atributos:
+
+id_pedido (INT) - Chave estrangeira referenciando o pedido.
+
+id_produto (INT) - Chave estrangeira referenciando o produto.
+
+quantidade (INT) - Quantidade de unidades do produto no pedido.
+
+preco_unitario (DECIMAL(10, 2)) - Preço do produto na data do pedido.
+
+Relacionamentos:
+Clientes têm pedidos: Um cliente pode fazer vários pedidos, mas cada pedido pertence a apenas um cliente.
+
+Pedidos têm itens de pedido: Um pedido pode ter múltiplos itens, e cada item pertence a um pedido específico.
+
+Produtos são relacionados aos itens de pedido: Cada item de pedido faz referência a um produto específico.
