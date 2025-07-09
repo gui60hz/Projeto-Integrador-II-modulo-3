@@ -1,0 +1,5 @@
+git init
+git add banco_de_dados.sql
+git commit -m "Criação do banco de dados para o sistema de livraria com tabelas de clientes, produtos, pedidos e itens de pedido"
+git remote add origin https://github.com/seu_usuario/sistema_livraria.git
+git push -u origin master
